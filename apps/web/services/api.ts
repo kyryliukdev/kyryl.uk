@@ -1,3 +1,5 @@
+export type PromisedResponse<T> = Promise<{ data: T }>;
+
 export default async function api(path: string, params?: any) {
   const defaultParams = {
     headers: {

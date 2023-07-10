@@ -1,8 +1,9 @@
 import { GetServerSideProps } from "next";
 import { Button, Header } from "ui";
-import api from "../services/api";
+import api, { PromisedResponse } from "../services/api";
+import { Homepage } from "../../strapi/src/api/homepage/content-types/homepage/homepage";
 
-const getData = async () => {
+const getData = async (): PromisedResponse<Homepage> => {
   const res = await api("/homepage", {
     cache: "no-store"
   });

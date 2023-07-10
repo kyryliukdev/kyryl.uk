@@ -14,4 +14,7 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  "schemas-to-ts": {
+    enabled: true,
+  },
 });
